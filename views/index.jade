@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Existing Users - Enter Your Credentials
+    form(method="POST" action="/")
+      div
+          label(for="username") Username 
+          input(type="text" name="username" id="username")
+      div
+          label(for="password") Password 
+          input(type="text" name="password" id="password")
+      button(type="submit") Show details
+    
+    h2 New User
+    a(href="/form")
+      button Create User
+    
+

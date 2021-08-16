@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1 User details
+    h3 Username: #{user.username} 
+    h3 Revealed Password: #{user.password}
+    -const editURL=`/user/${user.userid}/edit`
+    -const deleteURL=`/user/${user.userid}?_method=DELETE`
+    a(href=editURL)
+        button() Edit Details
+    form(method='POST' action=deleteURL)
+        button() Delete User

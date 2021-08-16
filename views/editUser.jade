@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 Edit your details
+    -const formAction = `/user/${user.userid}?_method=PUT`
+    form(method="POST" action=formAction)
+        div
+            label(for="username") Username
+            -const username = user.username
+            input(type="text" name="username" id="username" value=username)
+        div
+            label(for="password") Password 
+            -const password = user.password
+            input(type="password" name="password" id="password" value=password)
+        button(type="submit") Update details
