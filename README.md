@@ -1,8 +1,6 @@
 # simpleMVC
 SimpleMVC app to demonstrate model-view-controller concepts.
 
-SimpleMVC app to demonstrate model-view-controller concepts.
-
 This simple MVC app demonstrates the concepts of working with a database to retrieve, update, delete and insert new information into the database which will then be retrieved and displayed on the browser. Error messages are logged onto the console for debugging purposes.
 
 The application consists of simple CRUD functionality. Users of the app are able to:
