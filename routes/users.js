@@ -15,7 +15,7 @@ router.route('/user')
 
 router.route('/user/:id')
   .get(userController.showUserDetails)
-  .put(userController.updateUserDetails)
+  .put(validateFields, userController.updateUserDetails)
   .delete(userController.deleteUser)
 
 router.route('/user/:id/edit')

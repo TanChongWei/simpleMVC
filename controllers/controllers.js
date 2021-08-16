@@ -33,6 +33,7 @@ module.exports.createNewUser = async (req, res, next) => {
     try {
         const newUser = req.body;
         newUser["userid"] = uuid()
+        await db.none(`Select * from mock_data where username='${newUser.username}'`)
         const query = pgp.helpers.insert(newUser, null, 'mock_data')
         await db.none(query)
         res.redirect(`/user/${newUser.userid}`)
